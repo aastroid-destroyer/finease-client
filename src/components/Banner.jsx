@@ -78,7 +78,9 @@ const Banner = () => {
           </div>
         </div>
       </div>
-      <SimpleFinanceMarquee/>
+      <SimpleFinanceMarquee name={"FinEase | An easy-to-use UI for your finance management"}>
+
+      </SimpleFinanceMarquee>
     </section>
   );
 };
