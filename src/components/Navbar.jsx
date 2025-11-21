@@ -27,14 +27,14 @@ const Navbar = () => {
     const isActive = (path) => location.pathname === path;
 
     return (
-        <nav className="sticky top-0 z-50 w-full bg-base-100/95 backdrop-blur-md shadow-sm border-b border-base-300 transition-all duration-300">
+        <nav className="sticky top-0 z-50 w-full bg-white/90 dark:bg-gray-900/90 backdrop-blur-xl shadow-lg border-b border-gray-100 dark:border-gray-800 transition-all duration-500">
             <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                 <div className="flex h-16 items-center justify-between">
                     {/* Left Section */}
                     <div className="flex items-center gap-8">
                         {/* Mobile Menu */}
                         <div className="dropdown lg:hidden">
-                            <label tabIndex={0} className="btn btn-ghost btn-sm btn-circle hover:bg-base-200 transition-all duration-300">
+                            <label tabIndex={0} className="btn btn-ghost btn-sm btn-circle hover:bg-gray-100 dark:hover:bg-gray-800 transition-all duration-300">
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
                                     className="h-5 w-5"
@@ -48,24 +48,24 @@ const Navbar = () => {
 
                             <ul
                                 tabIndex={0}
-                                className="menu menu-sm dropdown-content mt-3 z-[20] p-2 shadow-xl bg-base-100 rounded-xl w-56 space-y-1 border border-base-300"
+                                className="menu menu-sm dropdown-content mt-3 z-[20] p-2 shadow-2xl bg-white dark:bg-gray-900 rounded-2xl w-56 space-y-1 border border-gray-100 dark:border-gray-800"
                             >
                                 <li>
-                                    <Link to="/" className={`font-medium rounded-lg transition-all duration-300 ${isActive('/') ? 'bg-primary/10 text-primary' : 'hover:bg-base-200 text-base-content'}`}>
+                                    <Link to="/" className={`font-semibold rounded-lg transition-all duration-300 ${isActive('/') ? 'bg-blue-500 text-white shadow-lg scale-105' : 'hover:bg-blue-50 dark:hover:bg-gray-800 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400'}`}>
                                         Home
                                     </Link>
                                 </li>
                                 {user && (
                                     <>
                                         <li>
-                                            <Link to="/add-transaction" className={`font-medium rounded-lg transition-all duration-300 ${isActive('/add-transaction') ? 'bg-primary/10 text-primary' : 'hover:bg-base-200 text-base-content'}`}>
+                                            <Link to="/add-transaction" className={`font-semibold rounded-lg transition-all duration-300 ${isActive('/add-transaction') ? 'bg-blue-500 text-white shadow-lg scale-105' : 'hover:bg-blue-50 dark:hover:bg-gray-800 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400'}`}>
                                                 Add Transaction
                                             </Link>
                                         </li>
                                         <li>
                                             <Link
                                                 to="/my-transactions"
-                                                className={`font-medium rounded-lg transition-all duration-300 ${isActive('/my-transactions') ? 'bg-primary/10 text-primary' : 'hover:bg-base-200 text-base-content'}`}
+                                                className={`font-semibold rounded-lg transition-all duration-300 ${isActive('/my-transactions') ? 'bg-blue-500 text-white shadow-lg scale-105' : 'hover:bg-blue-50 dark:hover:bg-gray-800 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400'}`}
                                             >
                                                 My Transactions
                                             </Link>
@@ -73,14 +73,13 @@ const Navbar = () => {
                                         <li>
                                             <Link
                                                 to="/reports"
-                                                className={`font-medium rounded-lg transition-all duration-300 ${isActive('/reports') ? 'bg-primary/10 text-primary' : 'hover:bg-base-200 text-base-content'}`}
+                                                className={`font-semibold rounded-lg transition-all duration-300 ${isActive('/reports') ? 'bg-blue-500 text-white shadow-lg scale-105' : 'hover:bg-blue-50 dark:hover:bg-gray-800 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400'}`}
                                             >
                                                 Reports
                                             </Link>
                                         </li>
-                                        <li>
+                                        <li className="px-3 py-2">
                                             <Switch />
-
                                         </li>
                                     </>
                                 )}
@@ -93,25 +92,26 @@ const Navbar = () => {
                             className="flex items-center gap-2 group"
                         >
                             <div className="relative">
-                                <div className="absolute inset-0 bg-gradient-to-r from-primary to-secondary rounded-lg blur-sm opacity-75 group-hover:opacity-100 transition-opacity"></div>
+                                <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-xl flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300">
+                                    <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                    </svg>
+                                </div>
                             </div>
-                            <span className="text-3xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+                            <span className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
                                 FinEase
                             </span>
                         </Link>
 
                         {/* Center Navigation for Desktop */}
                         <div className="hidden lg:flex">
-                            <ul className="flex items-center gap-1">
+                            <ul className="flex items-center gap-2">
                                 <li>
                                     <Link
-                                        className={`relative px-4 py-2 text-sm font-medium transition-all duration-300 rounded-lg ${isActive('/') ? 'text-primary font-bold' : 'text-base-content/80 hover:text-primary'}`}
+                                        className={`relative px-4 py-2 text-sm font-semibold transition-all duration-300 rounded-lg ${isActive('/') ? 'text-white bg-blue-500 shadow-lg shadow-blue-500/30 scale-105' : 'text-gray-700 dark:text-gray-300 hover:bg-blue-50 dark:hover:bg-gray-800 hover:text-blue-600 dark:hover:text-blue-400 hover:scale-105'}`}
                                         to="/"
                                     >
                                         Home
-                                        {isActive('/') && (
-                                            <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-8 h-0.5 bg-primary rounded-full"></span>
-                                        )}
                                     </Link>
                                 </li>
 
@@ -119,40 +119,30 @@ const Navbar = () => {
                                     <>
                                         <li>
                                             <Link
-                                                className={`relative px-4 py-2 text-sm font-medium transition-all duration-300 rounded-lg ${isActive('/add-transaction') ? 'text-primary' : 'text-base-content/80 hover:text-primary'}`}
+                                                className={`relative px-4 py-2 text-sm font-semibold transition-all duration-300 rounded-lg ${isActive('/add-transaction') ? 'text-white bg-blue-500 shadow-lg shadow-blue-500/30 scale-105' : 'text-gray-700 dark:text-gray-300 hover:bg-blue-50 dark:hover:bg-gray-800 hover:text-blue-600 dark:hover:text-blue-400 hover:scale-105'}`}
                                                 to="/add-transaction"
                                             >
                                                 Add Transaction
-                                                {isActive('/add-transaction') && (
-                                                    <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-8 h-0.5 bg-primary rounded-full"></span>
-                                                )}
                                             </Link>
                                         </li>
                                         <li>
                                             <Link
-                                                className={`relative px-4 py-2 text-sm font-medium transition-all duration-300 rounded-lg ${isActive('/my-transactions') ? 'text-primary' : 'text-base-content/80 hover:text-primary'}`}
+                                                className={`relative px-4 py-2 text-sm font-semibold transition-all duration-300 rounded-lg ${isActive('/my-transactions') ? 'text-white bg-blue-500 shadow-lg shadow-blue-500/30 scale-105' : 'text-gray-700 dark:text-gray-300 hover:bg-blue-50 dark:hover:bg-gray-800 hover:text-blue-600 dark:hover:text-blue-400 hover:scale-105'}`}
                                                 to="/my-transactions"
                                             >
                                                 My Transactions
-                                                {isActive('/my-transactions') && (
-                                                    <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-8 h-0.5 bg-primary rounded-full"></span>
-                                                )}
                                             </Link>
                                         </li>
                                         <li>
                                             <Link
-                                                className={`relative px-4 py-2 text-sm font-medium transition-all duration-300 rounded-lg ${isActive('/reports') ? 'text-primary' : 'text-base-content/80 hover:text-primary'}`}
+                                                className={`relative px-4 py-2 text-sm font-semibold transition-all duration-300 rounded-lg ${isActive('/reports') ? 'text-white bg-blue-500 shadow-lg shadow-blue-500/30 scale-105' : 'text-gray-700 dark:text-gray-300 hover:bg-blue-50 dark:hover:bg-gray-800 hover:text-blue-600 dark:hover:text-blue-400 hover:scale-105'}`}
                                                 to="/reports"
                                             >
                                                 Reports
-                                                {isActive('/reports') && (
-                                                    <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-8 h-0.5 bg-primary rounded-full"></span>
-                                                )}
                                             </Link>
                                         </li>
-                                        <li>
+                                        <li className="px-3 py-2">
                                             <Switch />
-
                                         </li>
                                     </>
                                 )}
@@ -166,9 +156,9 @@ const Navbar = () => {
                             <div className="dropdown dropdown-end">
                                 <label
                                     tabIndex={0}
-                                    className="btn btn-ghost btn-circle avatar hover:bg-base-200 transition-all duration-300"
+                                    className="btn btn-ghost btn-circle avatar hover:bg-gray-100 dark:hover:bg-gray-800 transition-all duration-300"
                                 >
-                                    <div className="w-9 h-9 rounded-full ring-2 ring-base-300 overflow-hidden">
+                                    <div className="w-10 h-10 rounded-full ring-2 ring-blue-500 ring-offset-2 ring-offset-white dark:ring-offset-gray-900 overflow-hidden">
                                         <img
                                             src={user.photoURL || "https://via.placeholder.com/150"}
                                             alt="Profile"
@@ -179,11 +169,11 @@ const Navbar = () => {
 
                                 <ul
                                     tabIndex={0}
-                                    className="mt-3 z-[20] p-2 shadow-xl menu menu-sm dropdown-content bg-base-100 rounded-xl w-64 border border-base-300"
+                                    className="mt-3 z-[20] p-2 shadow-2xl menu menu-sm dropdown-content bg-white dark:bg-gray-900 rounded-2xl w-64 border border-gray-100 dark:border-gray-800"
                                 >
                                     <li className="p-3">
                                         <div className="flex items-center gap-3">
-                                            <div className="w-12 h-12 rounded-full overflow-hidden flex-shrink-0">
+                                            <div className="w-12 h-12 rounded-full overflow-hidden flex-shrink-0 ring-2 ring-blue-500 ring-offset-2 ring-offset-white dark:ring-offset-gray-900">
                                                 <img
                                                     src={user.photoURL || "https://via.placeholder.com/150"}
                                                     alt="Profile"
@@ -191,10 +181,10 @@ const Navbar = () => {
                                                 />
                                             </div>
                                             <div className="flex-1 min-w-0">
-                                                <div className="font-semibold text-base-content truncate">
+                                                <div className="font-semibold text-gray-900 dark:text-white truncate">
                                                     {user.displayName || "User"}
                                                 </div>
-                                                <div className="text-xs text-base-content/60 truncate">{user.email}</div>
+                                                <div className="text-xs text-gray-500 dark:text-gray-400 truncate">{user.email}</div>
                                             </div>
                                         </div>
                                     </li>
@@ -204,19 +194,19 @@ const Navbar = () => {
                                     <li>
                                         <Link
                                             to="/my-profile"
-                                            className="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-base-200 transition-all duration-300"
+                                            className="flex items-center gap-3 px-3 py-2 rounded-xl hover:bg-gray-100 dark:hover:bg-gray-800 transition-all duration-300"
                                         >
-                                            <svg className="w-4 h-4 text-base-content/60" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <svg className="w-4 h-4 text-gray-500 dark:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
                                             </svg>
-                                            <span className="font-medium text-base-content">My Profile</span>
+                                            <span className="font-medium text-gray-700 dark:text-gray-300">My Profile</span>
                                         </Link>
                                     </li>
 
                                     <li>
                                         <button
                                             onClick={handleLogout}
-                                            className="w-full flex items-center justify-center gap-2 px-4 py-2 bg-error hover:bg-error/90 text-white rounded-lg font-medium transition-all duration-300"
+                                            className="w-full flex items-center justify-center gap-2 px-4 py-2.5 bg-gradient-to-r from-red-500 to-pink-500 hover:from-red-600 hover:to-pink-600 text-white rounded-xl font-medium transition-all duration-300 shadow-md hover:shadow-lg"
                                         >
                                             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" />
