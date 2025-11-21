@@ -12,7 +12,6 @@ export const Login = () => {
 
     useEffect(() => {
         document.title = "FinEase"
-
         if (user) {
             navigate('/')
         }
@@ -22,7 +21,6 @@ export const Login = () => {
         e.preventDefault();
         const email = loginEmailRef.current.value;
         const password = e.target.password.value;
-
         setLoading(true)
         signInWithemailfunc(email, password)
             .then(() => {
@@ -41,12 +39,10 @@ export const Login = () => {
             })
             .finally(() => setLoading(false))
     }
-
     return (
         <div className="min-h-screen bg-gradient-to-br from-primary to-secondary flex items-center justify-center py-12 px-4">
             <div className="w-full max-w-md bg-gray-800 rounded-lg shadow-lg p-8">
                 <h1 className="text-3xl font-bold text-white text-center mb-6">Login</h1>
-
                 <form onSubmit={handleEmailLogin} className="space-y-4">
                     <div>
                         <label className="block text-gray-300 mb-2">Email</label>
@@ -67,7 +63,6 @@ export const Login = () => {
                             className="w-full px-4 py-2 bg-gray-700 text-white rounded border border-gray-600 focus:outline-none focus:border-accent"
                         />
                     </div>
-
                     <button
                         type="submit"
                         disabled={loading}
@@ -76,7 +71,6 @@ export const Login = () => {
                         {loading ? "Logging in..." : "Login"}
                     </button>
                 </form>
-
                 <button
                     onClick={signInwithgooglefunc}
                     disabled={loading}
@@ -85,7 +79,6 @@ export const Login = () => {
                     <FcGoogle className="h-5 w-5" />
                     <span>Login with Google</span>
                 </button>
-
                 <div className="mt-4 text-center text-gray-400">
                     <p>
                         Don't have an account?{" "}
