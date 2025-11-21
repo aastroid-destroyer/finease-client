@@ -122,7 +122,7 @@ const MyTransactions = () => {
                 )}
 
                 {!loading && transactions.length > 0 && (
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 bg-base-100 border-1 border-gray-100 shadow-lg rounded-2xl p-10">
                         {sortedTransactions.map((transaction) => (
                             <TranCard key={transaction.id} transaction={transaction} />
                         ))}

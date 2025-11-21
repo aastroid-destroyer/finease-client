@@ -51,7 +51,7 @@ const TranCard = ({ transaction }) => {
         });
     };
     return (
-        <div key={transaction._id} className="card bg-white shadow-sm hover:shadow-lg transition-all duration-300 border border-gray-100 rounded-xl overflow-hidden group">
+        <div key={transaction._id} className="card bg-base-100 shadow-sm hover:shadow-lg transition-all duration-300 border border-gray-200 rounded-xl overflow-hidden group">
             <div className="card-body p-6">
 
                 <div className="flex justify-between items-center mb-4">
