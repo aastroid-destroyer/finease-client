@@ -1,10 +1,12 @@
 import { useNavigate } from "react-router";
 import Button from "./common/Button";
+import Marquee from "react-fast-marquee";
+import SimpleFinanceMarquee from "./common/SimpleFinanceMarquee";
 
 const Banner = () => {
 
   const navigate = useNavigate()
-  const handleGetStarted = () =>{
+  const handleGetStarted = () => {
     navigate('/my-transactions')
   }
   return (
@@ -76,6 +78,7 @@ const Banner = () => {
           </div>
         </div>
       </div>
+      <SimpleFinanceMarquee/>
     </section>
   );
 };
