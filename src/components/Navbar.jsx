@@ -51,20 +51,14 @@ const Navbar = () => {
                                 className="menu menu-sm dropdown-content mt-3 z-[20] p-2 shadow-xl bg-base-100 rounded-xl w-56 space-y-1 border border-base-300"
                             >
                                 <li>
-                                    <Link
-                                        to="/"
-                                        className={`font-medium rounded-lg transition-all duration-300 ${isActive('/') ? 'bg-primary/10 text-primary' : 'hover:bg-base-200 text-base-content'}`}
-                                    >
+                                    <Link to="/" className={`font-medium rounded-lg transition-all duration-300 ${isActive('/') ? 'bg-primary/10 text-primary' : 'hover:bg-base-200 text-base-content'}`}>
                                         Home
                                     </Link>
                                 </li>
                                 {user && (
                                     <>
                                         <li>
-                                            <Link
-                                                to="/add-transaction"
-                                                className={`font-medium rounded-lg transition-all duration-300 ${isActive('/add-transaction') ? 'bg-primary/10 text-primary' : 'hover:bg-base-200 text-base-content'}`}
-                                            >
+                                            <Link to="/add-transaction" className={`font-medium rounded-lg transition-all duration-300 ${isActive('/add-transaction') ? 'bg-primary/10 text-primary' : 'hover:bg-base-200 text-base-content'}`}>
                                                 Add Transaction
                                             </Link>
                                         </li>
@@ -233,7 +227,7 @@ const Navbar = () => {
                                 </ul>
                             </div>
                         ) : (
-                            <LogSign/>
+                            <LogSign />
                         )}
                     </div>
                 </div>
