@@ -51,21 +51,21 @@ const Navbar = () => {
                                 className="menu menu-sm dropdown-content mt-3 z-[20] p-2 shadow-2xl bg-white dark:bg-gray-900 rounded-2xl w-56 space-y-1 border border-gray-100 dark:border-gray-800"
                             >
                                 <li>
-                                    <Link to="/" className={`font-semibold rounded-lg transition-all duration-300 ${isActive('/') ? 'bg-blue-500 text-white shadow-lg scale-105' : 'hover:bg-blue-50 dark:hover:bg-gray-800 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400'}`}>
+                                    <Link to="/" className={`font-semibold rounded-lg transition-all duration-300 ${isActive('/') ? 'bg-[#644dff] text-white shadow-lg scale-105' : 'hover:bg-blue-50 dark:hover:bg-gray-800 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400'}`}>
                                         Home
                                     </Link>
                                 </li>
                                 {user && (
                                     <>
                                         <li>
-                                            <Link to="/add-transaction" className={`font-semibold rounded-lg transition-all duration-300 ${isActive('/add-transaction') ? 'bg-blue-500 text-white shadow-lg scale-105' : 'hover:bg-blue-50 dark:hover:bg-gray-800 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400'}`}>
+                                            <Link to="/add-transaction" className={`font-semibold rounded-lg transition-all duration-300 ${isActive('/add-transaction') ? 'bg-[#644dff] text-white shadow-lg scale-105' : 'hover:bg-blue-50 dark:hover:bg-gray-800 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400'}`}>
                                                 Add Transaction
                                             </Link>
                                         </li>
                                         <li>
                                             <Link
                                                 to="/my-transactions"
-                                                className={`font-semibold rounded-lg transition-all duration-300 ${isActive('/my-transactions') ? 'bg-blue-500 text-white shadow-lg scale-105' : 'hover:bg-blue-50 dark:hover:bg-gray-800 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400'}`}
+                                                className={`font-semibold rounded-lg transition-all duration-300 ${isActive('/my-transactions') ? 'bg-[#644dff] text-white shadow-lg scale-105' : 'hover:bg-blue-50 dark:hover:bg-gray-800 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400'}`}
                                             >
                                                 My Transactions
                                             </Link>
@@ -73,7 +73,7 @@ const Navbar = () => {
                                         <li>
                                             <Link
                                                 to="/reports"
-                                                className={`font-semibold rounded-lg transition-all duration-300 ${isActive('/reports') ? 'bg-blue-500 text-white shadow-lg scale-105' : 'hover:bg-blue-50 dark:hover:bg-gray-800 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400'}`}
+                                                className={`font-semibold rounded-lg transition-all duration-300 ${isActive('/reports') ? 'bg-[#644dff] text-white shadow-lg scale-105' : 'hover:bg-blue-50 dark:hover:bg-gray-800 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400'}`}
                                             >
                                                 Reports
                                             </Link>
@@ -103,7 +103,7 @@ const Navbar = () => {
                             <ul className="flex items-center gap-2">
                                 <li>
                                     <Link
-                                        className={`relative px-4 py-2 text-sm font-semibold transition-all duration-300 rounded-lg ${isActive('/') ? 'text-white bg-blue-500 shadow-lg shadow-blue-500/30 scale-105' : 'text-gray-700 dark:text-gray-300 hover:bg-blue-50 dark:hover:bg-gray-800 hover:text-blue-600 dark:hover:text-blue-400 hover:scale-105'}`}
+                                        className={`relative px-4 py-2 text-sm font-semibold transition-all duration-300 rounded-lg ${isActive('/') ? 'text-white bg-[#644dff] shadow-lg shadow-blue-500/30 scale-105' : 'text-gray-700 dark:text-gray-300 hover:bg-blue-50 dark:hover:bg-gray-800 hover:text-blue-600 dark:hover:text-blue-400 hover:scale-105'}`}
                                         to="/"
                                     >
                                         Home
@@ -114,7 +114,7 @@ const Navbar = () => {
                                     <>
                                         <li>
                                             <Link
-                                                className={`relative px-4 py-2 text-sm font-semibold transition-all duration-300 rounded-lg ${isActive('/add-transaction') ? 'text-white bg-blue-500 shadow-lg shadow-blue-500/30 scale-105' : 'text-gray-700 dark:text-gray-300 hover:bg-blue-50 dark:hover:bg-gray-800 hover:text-blue-600 dark:hover:text-blue-400 hover:scale-105'}`}
+                                                className={`relative px-4 py-2 text-sm font-semibold transition-all duration-300 rounded-lg ${isActive('/add-transaction') ? 'text-white bg-[#644dff] shadow-lg shadow-blue-500/30 scale-105' : 'text-gray-700 dark:text-gray-300 hover:bg-blue-50 dark:hover:bg-gray-800 hover:text-blue-600 dark:hover:text-blue-400 hover:scale-105'}`}
                                                 to="/add-transaction"
                                             >
                                                 Add Transaction
@@ -122,7 +122,7 @@ const Navbar = () => {
                                         </li>
                                         <li>
                                             <Link
-                                                className={`relative px-4 py-2 text-sm font-semibold transition-all duration-300 rounded-lg ${isActive('/my-transactions') ? 'text-white bg-blue-500 shadow-lg shadow-blue-500/30 scale-105' : 'text-gray-700 dark:text-gray-300 hover:bg-blue-50 dark:hover:bg-gray-800 hover:text-blue-600 dark:hover:text-blue-400 hover:scale-105'}`}
+                                                className={`relative px-4 py-2 text-sm font-semibold transition-all duration-300 rounded-lg ${isActive('/my-transactions') ? 'text-white bg-[#644dff] shadow-lg shadow-blue-500/30 scale-105' : 'text-gray-700 dark:text-gray-300 hover:bg-blue-50 dark:hover:bg-gray-800 hover:text-blue-600 dark:hover:text-blue-400 hover:scale-105'}`}
                                                 to="/my-transactions"
                                             >
                                                 My Transactions
@@ -130,7 +130,7 @@ const Navbar = () => {
                                         </li>
                                         <li>
                                             <Link
-                                                className={`relative px-4 py-2 text-sm font-semibold transition-all duration-300 rounded-lg ${isActive('/reports') ? 'text-white bg-blue-500 shadow-lg shadow-blue-500/30 scale-105' : 'text-gray-700 dark:text-gray-300 hover:bg-blue-50 dark:hover:bg-gray-800 hover:text-blue-600 dark:hover:text-blue-400 hover:scale-105'}`}
+                                                className={`relative px-4 py-2 text-sm font-semibold transition-all duration-300 rounded-lg ${isActive('/reports') ? 'text-white bg-[#644dff] shadow-lg shadow-blue-500/30 scale-105' : 'text-gray-700 dark:text-gray-300 hover:bg-blue-50 dark:hover:bg-gray-800 hover:text-blue-600 dark:hover:text-blue-400 hover:scale-105'}`}
                                                 to="/reports"
                                             >
                                                 Reports
