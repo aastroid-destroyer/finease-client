@@ -78,9 +78,6 @@ const Navbar = () => {
                                                 Reports
                                             </Link>
                                         </li>
-                                        <li className="px-3 py-2">
-                                            <Switch />
-                                        </li>
                                     </>
                                 )}
                             </ul>
@@ -136,9 +133,7 @@ const Navbar = () => {
                                                 Reports
                                             </Link>
                                         </li>
-                                        <li className="px-3 py-2">
-                                            <Switch />
-                                        </li>
+
                                     </>
                                 )}
                             </ul>
@@ -185,6 +180,10 @@ const Navbar = () => {
                                     </li>
 
                                     <div className="divider my-1"></div>
+                                    <li className="px-3 py-2">
+                                        <Switch />
+                                    </li>
+                                    <div className="divider my-1"></div>
 
                                     <li>
                                         <Link
@@ -197,6 +196,7 @@ const Navbar = () => {
                                             <span className="font-medium text-gray-700 dark:text-gray-300">My Profile</span>
                                         </Link>
                                     </li>
+                                    <div className="divider my-1"></div>
 
                                     <li>
                                         <button
