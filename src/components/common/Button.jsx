@@ -4,42 +4,38 @@ import styled from 'styled-components';
 const Button = ({name}) => {
   return (
     <StyledWrapper>
-      <button className="button">
-        {name}
-      </button>
+      <button>{name}</button>
     </StyledWrapper>
   );
 }
 
 const StyledWrapper = styled.div`
-  .button {
-    --😀: #644dff;
-    --😀😀: #4836bb;
-    --😀😀😀: #654dff63;
+  button {
+    font-size: 16px;
+    padding: 1em 3.3em;
     cursor: pointer;
-    width: 184px;
-    height: 48px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
-    font-size: 1.125em;
-    font-weight: 800;
-    letter-spacing: 2px;
-    color: #fff;
-    background: var(--😀);
-    border: 2px solid var(--😀😀);
-    border-radius: .75rem;
-    box-shadow: 0 8px 0 var(--😀😀);
-    transform: skew(-10deg);
-    transition: all .1s ease;
-    filter: drop-shadow(0 15px 20px var(--😀😀😀));
+    transform: perspective(200px) rotateX(15deg);
+    color: white;
+    font-weight: 900;
+    border: none;
+    border-radius: 5px;
+    background: linear-gradient(
+      0deg,
+      rgba(63, 94, 251, 1) 0%,
+      rgba(70, 135, 252, 1) 100%
+    );
+    box-shadow: rgba(63, 94, 251, 0.2) 0px 40px 29px 0px;
+    will-change: transform;
+    transition: all 0.3s;
+    border-bottom: 2px solid rgba(70, 135, 252, 1);
   }
 
-  .button:active {
-    letter-spacing: 0px;
-    transform: skew(-10deg) translateY(8px);
-    box-shadow: 0 0 0 var(--😀😀😀);
+  button:hover {
+    transform: perspective(180px) rotateX(30deg) translateY(2px);
+  }
+
+  button:active {
+    transform: perspective(170px) rotateX(36deg) translateY(5px);
   }`;
 
 export default Button;

@@ -2,6 +2,7 @@ import React, { useContext, useState } from "react";
 import { useNavigate } from "react-router";
 import { AuthContext } from "../conext/AuthContext";
 import { toast } from "react-toastify";
+import Button from "../components/common/Button";
 
 const AddTransaction = () => {
     const { user } = useContext(AuthContext);
@@ -152,7 +153,8 @@ const AddTransaction = () => {
                             </div>
 
                             <div className="form-control mt-8">
-                                <button
+                                <Button name={"Add Transaction"}/>
+                                {/* <button
                                     type="submit"
                                     className="btn bg-gradient-to-r from-primary to-secondary border-0 text-white font-medium py-3 px-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-[1.02]"
                                     disabled={loading}
@@ -165,7 +167,7 @@ const AddTransaction = () => {
                                     ) : (
                                         "Add Transaction"
                                     )}
-                                </button>
+                                </button> */}
                             </div>
                         </form>
                     </div>
