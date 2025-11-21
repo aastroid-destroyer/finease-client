@@ -2,6 +2,7 @@ import { use, useContext } from "react";
 import { useLoaderData, useNavigate } from "react-router";
 import { AuthContext } from "../conext/AuthContext";
 import { toast } from "react-toastify";
+import Button from "../components/common/Button";
 
 const UpdateTransaction = () => {
   const { user } = useContext(AuthContext)
@@ -37,7 +38,7 @@ const UpdateTransaction = () => {
   };
 
   return (
-    <div className="card bg-base-100 w-full max-w-md mx-auto shadow-2xl rounded-2xl">
+    <div className="card bg-base-100 w-full max-w-md mx-auto shadow-2xl rounded-2xl mb-10">
       <div className="card-body p-6">
         <h2 className="text-2xl font-bold text-center mb-6">Update Transaction</h2>
 
@@ -105,12 +106,9 @@ const UpdateTransaction = () => {
           </div>
 
           {/* Submit */}
-          <button
-            type="submit"
-            className="btn w-full text-white mt-6 rounded-full bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-600 hover:to-indigo-700"
-          >
-            Update Transaction
-          </button>
+          <div >
+            <Button name={"Update Transaction"}/>
+          </div>
         </form>
       </div>
     </div>
